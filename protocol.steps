@@ -1,0 +1,33 @@
+{
+  "schema": "riverbraid.gold.protocol.steps",
+  "version": "1.0.0",
+  "repo": "Riverbraid-Storage-Gold",
+  "ring": 1,
+  "petal": "Storage-Gold",
+  "invariant": "STORAGE_STATIONARY",
+  "claim_boundary": "declared-conditions-only",
+  "canonical_input": {
+    "repo": "Riverbraid-Storage-Gold",
+    "petal": "Storage-Gold",
+    "ring": 1,
+    "invariant": "STORAGE_STATIONARY"
+  },
+  "expected_result": true,
+  "steps": [
+    "receive canonical stationarity object",
+    "require repo to equal Riverbraid-Storage-Gold",
+    "require petal to equal Storage-Gold",
+    "require ring to equal 1",
+    "require invariant to equal STORAGE_STATIONARY",
+    "emit deterministic verification output"
+  ],
+  "forbidden": [
+    "Date",
+    "Math.random",
+    "randomUUID",
+    "timestamps",
+    "absolute paths",
+    "environment dependent values",
+    "external lookups"
+  ]
+}
